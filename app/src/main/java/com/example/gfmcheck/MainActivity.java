@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText pwd1;
     private EditText conpwd;
     private Button signup;
-
+    private Button backtologin;
 
 
 
@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         zprn=(EditText)findViewById(R.id.zprn);
         pwd1=(EditText)findViewById(R.id.pwd);
         conpwd=(EditText)findViewById(R.id.conpwd);
-        signup=(Button)findViewById(R.id.signbut);
+        signup=(Button)findViewById(R.id.signupbutton);
+        backtologin=(Button)findViewById(R.id.backtologinbutton);
 
     }
 }
