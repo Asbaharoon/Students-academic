@@ -36,5 +36,17 @@ public class MainActivity extends AppCompatActivity {
         signup=(Button)findViewById(R.id.signupbutton);
         backtologin=(Button)findViewById(R.id.backtologinbutton);
 
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                validate(f.getText().toString(),m.getText().toString(),l.getText().toString(),ei.getText().toString(),zprn.getText().toString(),pwd1.getText().toString(),conpwd.getText().toString());
+            }
+        });
+
+    }
+
+
+    private void validate(String fn,String mn,String ln,String ein,String zprnn,String pwd1n,String conpwdn,){
+
     }
 }
