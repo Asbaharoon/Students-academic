@@ -3,11 +3,13 @@ package com.example.gfmcheck;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,11 +59,21 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void validate(String fn,String mn,String ln,String ein,String zprnn,String pwd1n,String conpwdn){
-    if(fn!=null && mn!=null && ln!=null && ein!=null && zprnn!=null && pwd1n!=null && conpwdn!=null) {
-        if (pwd1n.equals(conpwdn)) {
+    //if(fn!=null || mn!=null || ln!=null || ein!=null || zprnn!=null || pwd1n!=null || conpwdn!=null) {
+    //if(f.getText().toString()!=null && m.getText().toString()!=null||l.getText().toString()!=null ||ei.getText().toString()!=null || zprn.getText().toString()!=null || pwd1.getText().toString()!=null || conpwd.getText().toString()!=null){
+      if(pwd1n.isEmpty() || conpwdn.isEmpty() || mn.isEmpty() || ln.isEmpty() || ein.isEmpty() || fn.isEmpty() || zprnn.isEmpty()){
+
+            }
+    else{
+
+        if (pwd1n.equals(conpwdn) && pwd1n!=null && conpwdn!=null) {
             Intent intent1 = new Intent(MainActivity.this,dataact.class);
             startActivity(intent1);
         }
+        else{
+            conpwd.setError("*Enter same password as above");
+        }
+
 
     }
 
