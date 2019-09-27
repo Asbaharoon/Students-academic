@@ -63,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
     //if(f.getText().toString()!=null && m.getText().toString()!=null||l.getText().toString()!=null ||ei.getText().toString()!=null || zprn.getText().toString()!=null || pwd1.getText().toString()!=null || conpwd.getText().toString()!=null){
       if(pwd1n.isEmpty() || conpwdn.isEmpty() || mn.isEmpty() || ln.isEmpty() || ein.isEmpty() || fn.isEmpty() || zprnn.isEmpty()){
 
+          if(pwd1n.isEmpty()) pwd1.setError("Content missing");
+          if(conpwdn.isEmpty()) conpwd.setError("Content missing");
+          if(ln.isEmpty()) l.setError("Content missing");
+          if(mn.isEmpty()) m.setError("Content missing");
+          if(fn.isEmpty()) f.setError("Content missing");
+          if(zprnn.isEmpty()) zprn.setError("Content missing");
+          if(ein.isEmpty()) ei.setError("Content missing");
+
             }
     else{
 
