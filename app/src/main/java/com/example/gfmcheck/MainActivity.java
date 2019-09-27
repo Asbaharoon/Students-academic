@@ -37,35 +37,34 @@ public class MainActivity extends AppCompatActivity {
         signup=(Button)findViewById(R.id.signupbutton);
         backtologin=(Button)findViewById(R.id.backtologinbutton);
 
+
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                validate(f.getText().toString(),m.getText().toString(),l.getText().toString(),ei.getText().toString(),zprn.getText().toString(),pwd1.getText().toString(),conpwd.getText().toString());
+
+            }
+        });
         backtologin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v1) {
                 abc();
             }
         });
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                validate(f.getText().toString(),m.getText().toString(),l.getText().toString(),ei.getText().toString(),zprn.getText().toString(),pwd1.getText().toString(),conpwd.getText().toString());
-            }
-        });
+
 
     }
 
 
     private void validate(String fn,String mn,String ln,String ein,String zprnn,String pwd1n,String conpwdn){
     if(fn!=null && mn!=null && ln!=null && ein!=null && zprnn!=null && pwd1n!=null && conpwdn!=null) {
-        if (pwd1n == conpwdn) {
-            Intent intent = new Intent(MainActivity.this, dataact.class);
-            startActivity(intent);
+        if (pwd1n.equals(conpwdn)) {
+            Intent intent1 = new Intent(MainActivity.this,dataact.class);
+            startActivity(intent1);
         }
-        else{
-
-        }
-    }
-    else {
 
     }
+
     }
 
     private void abc() {
