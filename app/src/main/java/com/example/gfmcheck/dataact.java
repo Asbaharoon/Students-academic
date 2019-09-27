@@ -9,10 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class dataact extends AppCompatActivity {
-    private EditText username;
-    private EditText password;
-    private Button signin;
-    private Button login;
 
 
 
@@ -23,17 +19,8 @@ public class dataact extends AppCompatActivity {
         setContentView(R.layout.activity_dataact);
 
 
-        username=(EditText)findViewById(R.id.editText);
-        password=(EditText)findViewById(R.id.editText2);
-        signin=(Button) findViewById(R.id.signupbutton);
-        login=(Button) findViewById(R.id.loginpagebutton);
 
-        signin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1 = new Intent(dataact.this,MainActivity.class);
-                startActivity(intent1);
-            }
-        });
+
+
     }
 }
