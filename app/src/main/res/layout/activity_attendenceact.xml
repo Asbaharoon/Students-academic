@@ -18,8 +18,8 @@
     <Button
         android:id="@+id/forma"
         style="@android:style/Widget.Button"
-        android:layout_width="109dp"
-        android:layout_height="68dp"
+        android:layout_width="125dp"
+        android:layout_height="71dp"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
         android:background="#00FFC107"
@@ -39,8 +39,8 @@
 
     <Button
         android:id="@+id/attendence"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_width="125dp"
+        android:layout_height="66dp"
         android:layout_marginStart="109dp"
         android:layout_marginLeft="109dp"
         android:layout_marginEnd="2dp"
