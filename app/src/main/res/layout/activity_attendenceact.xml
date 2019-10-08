@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dataact">
-
+    tools:context=".attendenceact">
     <Button
         android:id="@+id/backface"
         android:layout_width="0dp"
@@ -30,6 +29,7 @@
         android:shadowColor="#00FFFFFF"
         android:text="Form"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/attendence"
@@ -48,7 +48,7 @@
         android:background="#00FFC107"
         android:text="Attendence"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#FFFFFF"
+        android:textColor="#171819"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/setting"
@@ -69,5 +69,4 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/backface"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/attendence" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
