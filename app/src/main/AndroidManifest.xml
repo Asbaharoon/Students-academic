@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".loginact"></activity>
-        <activity android:name=".dataact" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".dataact"></activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".loginact">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
