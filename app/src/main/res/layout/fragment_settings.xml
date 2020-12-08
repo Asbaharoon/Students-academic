@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/text_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text=" Change Password"
+         android:layout_marginBottom="0dp"
+         android:layout_marginTop="20dp"/>
+     <EditText
+         android:id="@+id/opwd"
+         android:layout_width="match_parent"
+         android:layout_height="41dp"
+         android:layout_marginTop="1dp"
+         android:layout_marginEnd="40dp"
+         android:layout_marginRight="4dp"
+         android:maxLength="10"
+         android:ems="10"
+         android:hint="Old Password"
+         android:inputType="textPassword" />
+     <EditText
+         android:id="@+id/npwd"
+         android:layout_width="match_parent"
+         android:layout_height="41dp"
+         android:layout_marginTop="1dp"
+         android:layout_marginEnd="40dp"
+         android:layout_marginRight="4dp"
+         android:maxLength="10"
+         android:ems="10"
+         android:hint="New Password"
+         android:inputType="textPassword" />
+     <EditText
+         android:id="@+id/cnpwd"
+         android:layout_width="match_parent"
+         android:layout_height="41dp"
+         android:layout_marginTop="1dp"
+         android:layout_marginEnd="40dp"
+         android:layout_marginRight="4dp"
+         android:maxLength="10"
+         android:ems="10"
+         android:hint="confirm New Password"
+         android:inputType="textPassword" />
+
+     <Button
+         android:id="@+id/set"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="260dp"
+         android:layout_marginLeft="100dp"
+         android:layout_marginTop="5dp"
+         android:layout_marginBottom="3dp"
+
+         android:background="#88FF9800"
+         android:text="Set"
+         android:textColor="#FFFFFF" />
+
+  <ImageButton
+      android:id="@+id/logout"
+      android:layout_width="match_parent"
+      android:layout_height="80dp"
+      android:layout_marginLeft="0dp"
+      android:layout_marginTop="100dp"
+
+      android:layout_marginRight="270dp"
+      android:background="#02FFFFFF"
+      app:srcCompat="@drawable/ic_exit_to_app_black_24dp" />
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="*logout"
+         android:layout_marginBottom="0dp"
+         android:layout_marginRight="270dp"
+         android:layout_marginStart="45dp"
+         android:layout_marginTop="0dp"/>
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="*l"
+         android:layout_marginBottom="0dp"
+         android:layout_marginRight="270dp"
+         android:layout_marginStart="45dp"
+         android:layout_marginTop="0dp"
+         android:id="@+id/now"
+         android:visibility="gone"/>
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="*m"
+         android:layout_marginBottom="0dp"
+         android:layout_marginRight="270dp"
+         android:layout_marginStart="45dp"
+         android:layout_marginTop="0dp"
+         android:id="@+id/now1"
+         android:visibility="gone"/>
+
+ </LinearLayout>
+</RelativeLayout>
