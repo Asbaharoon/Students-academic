@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -57,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validate(f.getText().toString(),m.getText().toString(),l.getText().toString(),ei.getText().toString(),zprn.getText().toString(),pwd1.getText().toString(),conpwd.getText().toString());
+                validate(f.getText().toString(),m.getText().toString(),l.getText().toString()
+                        ,ei.getText().toString(),zprn.getText().toString(),pwd1.getText().toString(),conpwd.getText().toString());
 
             }
         });
@@ -72,9 +75,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void validate(String fn,String mn,String ln,String ein,String zprnn,String pwd1n,String conpwdn){
-    //if(fn!=null || mn!=null || ln!=null || ein!=null || zprnn!=null || pwd1n!=null || conpwdn!=null) {
-    //if(f.getText().toString()!=null && m.getText().toString()!=null||l.getText().toString()!=null ||ei.getText().toString()!=null || zprn.getText().toString()!=null || pwd1.getText().toString()!=null || conpwd.getText().toString()!=null){
+    private void validate(String fn, String mn, String ln, String ein, final String zprnn, String pwd1n, String conpwdn){
       if(pwd1n.isEmpty() || conpwdn.isEmpty() || mn.isEmpty() || ln.isEmpty() || ein.isEmpty() || fn.isEmpty() || zprnn.isEmpty()){
 
           if(pwd1n.isEmpty()) pwd1.setError("Content missing");
@@ -91,35 +92,36 @@ public class MainActivity extends AppCompatActivity {
         if (pwd1n.equals(conpwdn) && pwd1n!=null && conpwdn!=null) {
 
             // Create a new user with a first and last name
-            Map<String, Object> user = new HashMap<>();
-            user.put("first",fn);
-            user.put("middle",mn);
-            user.put("last",ln);
-            user.put("email",ein);
-            user.put("zprn",zprnn);
-            user.put("pwd",pwd1n);
-            user.put("confirmpwd",conpwdn);
 
 // Add a new document with a generated ID
-            db.collection("users")
-                    .add(user)
-            .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                        @Override
-                        public void onSuccess(DocumentReference documentReference) {
-                            Toast.makeText(getApplicationContext(),"Successfull",Toast.LENGTH_SHORT);
-                           // Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                            Intent intent1 = new Intent(MainActivity.this,dataact.class);
-                            startActivity(intent1);
 
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(getApplicationContext(),"Error adding document try again",Toast.LENGTH_LONG);
-                            // Log.w(TAG, "Error adding document", e);
-                        }
-                    });
+// Write a message to the database
+            signup.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference myRef = database.getReference("User");
+
+
+
+                    String zprn1=zprn.getText().toString().trim();
+                    add add=new add(f.getText().toString(),m.getText().toString(),l.getText().toString(),ei.getText().toString(),
+                            zprn.getText().toString(),pwd1.getText().toString(),conpwd.getText().toString(),"","",
+                            "", "","","","");
+                    myRef.child(zprn1).setValue(add);
+
+                    Intent int1 =new Intent(MainActivity.this,loginact.class);
+                    startActivity(int1);
+
+                    FirebaseDatabase database1 = FirebaseDatabase.getInstance();
+                    DatabaseReference myref1 = database1.getReference("Academics");
+                    myref1.child(zprn1).child("attendence").setValue(0);
+                    myref1.child(zprn1).child("total").setValue(1);
+                    myref1.child(zprn1).child("grandtotal").setValue(300);
+
+
+                }
+            });
 
         }
         else{

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.gfmcheck">
 
     <application
@@ -8,10 +9,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".settingact"></activity>
-        <activity android:name=".attendenceact" />
-        <activity android:name=".dataact" />
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".dataact"
+            android:label="@string/title_activity_dataact"></activity>
+        <activity android:name=".teacheract" />
         <activity android:name=".MainActivity" />
         <activity android:name=".loginact">
             <intent-filter>

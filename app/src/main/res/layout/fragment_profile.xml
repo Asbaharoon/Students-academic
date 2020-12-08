@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="260dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+
+            android:background="#88FF9800"
+            android:text="Edit form"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/profilepic"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/ic_person_occ_24dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  First name"
+            android:layout_marginBottom="0dp"
+          />
+
+
+        <EditText
+            android:id="@+id/fname"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"
+            android:ems="10"
+            android:hint=" First name"
+            android:inputType="textPersonName" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Middle name"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/mname"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:ems="10"
+            android:hint=" Middle name"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Last name"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/lname"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:ems="10"
+            android:hint=" Surname"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Mother's name"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="40dp"/>
+        <EditText
+            android:id="@+id/momname"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:ems="10"
+            android:hint=" Mother's name"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Birth Date"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/dob"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="190dp"
+            android:layout_marginRight="4dp"
+            android:ems="10"
+            android:hint=" dd/mm/yyyy"
+            android:inputType="date" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Email address"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/emailad"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:ems="10"
+            android:hint=" example@gmail.com"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  ZPRN"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/zprns"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:ems="10"
+            android:hint=" Z P R N"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Mobile number"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/smno"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:maxLength="10"
+            android:ems="10"
+            android:hint="Student's number"
+            android:inputType="number" />
+        <EditText
+            android:id="@+id/pmno"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:maxLength="10"
+            android:ems="10"
+            android:hint="Parents Number"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Blood Group"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/blood"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:ems="10"
+            android:hint="eg:O+"
+            android:maxLength="2"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Class"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Last year cgpa"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/cgpa"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:ems="10"
+            android:hint="Cgpa"
+            android:maxLength="4"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Number of back logs"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/backlogs"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:ems="10"
+            android:hint=""
+            android:maxLength="2"
+            android:inputType="number" />
+
+
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="260dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:background="#88FF9800"
+            android:text="Submit form"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/text_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="200dp"
+            android:visibility="visible"/>
+    </LinearLayout>
+</ScrollView>
