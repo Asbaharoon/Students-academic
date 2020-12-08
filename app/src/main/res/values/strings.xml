@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Gfm check</string>
+    <string name="title_activity_dataact">dataact</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_settings">Settings</string>
 </resources>
