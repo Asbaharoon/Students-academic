@@ -34,7 +34,7 @@ public class SettingsFragment extends Fragment {
     private EditText np;
     private EditText cnp;
     private SettingsViewModel settingsViewModel;
-    private ImageButton logout1;
+    private Button logout1;
     private Button set1;
     public DatabaseReference myRef;
     public ValueEventListener eventListener;
@@ -46,7 +46,7 @@ public class SettingsFragment extends Fragment {
         settingsViewModel =
                 ViewModelProviders.of(this).get(SettingsViewModel.class);
        final View root = inflater.inflate(R.layout.fragment_settings, container, false);
-        logout1=(ImageButton)root.findViewById(R.id.logout);
+        logout1=(Button)root.findViewById(R.id.logout);
 
         logout1.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -2,6 +2,7 @@ package com.example.gfmcheck;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -21,6 +22,10 @@ public class dataact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dataact);
         BottomNavigationView navView = findViewById(R.id.nav_view);
+        //
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        //
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         Intent intent = getIntent();

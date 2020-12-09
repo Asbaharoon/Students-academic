@@ -3,122 +3,196 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-
-        <TextView
-            android:id="@+id/text_settings"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:visibility="gone" />
+            android:orientation="vertical" >
 
-        <TextView
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="39dp"
+                android:layout_marginRight="39dp"
+                android:background="@drawable/shape_with_shadow">
+
+
+                <TextView
+                    android:id="@+id/text_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+
+                    android:gravity="center"
+                    android:text="Change Password"
+                    android:textColor="#63272525"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/opwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:hint="Old Password"
+                    android:inputType="textPassword"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_with_shadow"
+                    />
+
+                <EditText
+                    android:id="@+id/npwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="New Password"
+                    android:inputType="textPassword"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_with_shadow"
+                    />
+
+                <EditText
+                    android:id="@+id/cnpwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:hint="Confirm New Password"
+                    android:inputType="textPassword"
+                    android:background="@drawable/shape_with_shadow"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    />
+
+                <Button
+                    android:id="@+id/set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:paddingRight="100dp"
+                    android:paddingLeft="100dp"
+                    android:background="@drawable/shape_button"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="14dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+
+                    android:text="set"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/asdasdsadsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="270dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="*logout"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/now"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="270dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="*l"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/now1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="270dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="*m"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="0dp"
-            android:text=" Change Password" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginRight="39dp"
+            android:background="@drawable/shape_with_shadow">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Log out"
+                android:textColor="#63272525"
+                android:textSize="30sp" />
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:paddingRight="100dp"
+                android:paddingLeft="100dp"
+                android:background="@drawable/shape_button"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Log out"
+                android:textColor="#FFFFFF"
+                />
 
-        <EditText
-            android:id="@+id/opwd"
-            android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="4dp"
-            android:ems="10"
-            android:hint="Old Password"
-            android:inputType="textPassword"
-            android:maxLength="10" />
+            <TextView
+                android:id="@+id/asdasdsadsadqqq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="270dp"
+                android:layout_marginBottom="0dp"
+                android:text=""
+                android:visibility="invisible" />
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
-        <EditText
-            android:id="@+id/npwd"
-            android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="4dp"
-            android:ems="10"
-            android:hint="New Password"
-            android:inputType="textPassword"
-            android:maxLength="10" />
-
-        <EditText
-            android:id="@+id/cnpwd"
-            android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="4dp"
-            android:ems="10"
-            android:hint="confirm New Password"
-            android:inputType="textPassword"
-            android:maxLength="10" />
-
-        <Button
-            android:id="@+id/set"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="260dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="3dp"
-
-            android:background="#88FF9800"
-            android:text="Set"
-            android:textColor="#FFFFFF" />
-
-        <ImageButton
-            android:id="@+id/logout"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="100dp"
-
-            android:layout_marginRight="270dp"
-            android:background="#02FFFFFF"
-            app:srcCompat="@drawable/ic_exit_to_app_black_24dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginRight="270dp"
-            android:layout_marginBottom="0dp"
-            android:text="*logout" />
-
-        <TextView
-            android:id="@+id/now"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginRight="270dp"
-            android:layout_marginBottom="0dp"
-            android:text="*l"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/now1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginRight="270dp"
-            android:layout_marginBottom="0dp"
-            android:text="*m"
-            android:visibility="gone" />
-
-    </LinearLayout>
 </LinearLayout>
