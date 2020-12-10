@@ -131,6 +131,7 @@ public class HomeFragment extends Fragment {
                         desc1.setText("");
                         pieChart1.setDescription(desc1);
                         pieDataSet1.setColors(ColorTemplate.LIBERTY_COLORS);
+
                         pieChart1.animateXY(1400,1400);
 //
 
