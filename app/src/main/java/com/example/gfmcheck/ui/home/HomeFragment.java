@@ -16,11 +16,20 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.gfmcheck.R;
 import com.example.gfmcheck.dataact;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Description;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeFragment extends Fragment {
 
@@ -29,9 +38,11 @@ public class HomeFragment extends Fragment {
     public String prev2,st1,st2,st3;
     private EditText l;
     private Button send1;
-    private int att,tot,grand,s1,s2,s3;
+    protected int att,tot,grand,s1,s2,s3;
     public DatabaseReference myRef;
     public ValueEventListener eventListener;
+
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -44,6 +55,9 @@ public class HomeFragment extends Fragment {
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
 
+
+
+
                 /*FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myref12 = database.getReference();
                 myref12.child("Academics").child(prev2).child("Attendence").setValue();
@@ -53,12 +67,15 @@ public class HomeFragment extends Fragment {
                 l=(EditText)root.findViewById(R.id.comment);
                 send1=root.findViewById(R.id.send);
 
+
                 myRef = FirebaseDatabase.getInstance().getReference("Academics").child(prev2);
 
                 eventListener = myRef.addValueEventListener(new ValueEventListener() {
                     @Override
 
                     public void onDataChange(DataSnapshot dataSnapshot) {
+
+
 
                         st1= dataSnapshot.child("attendence").getValue().toString();
                         att=Integer.valueOf(st1);
@@ -76,13 +93,64 @@ public class HomeFragment extends Fragment {
 
                         TextView txt1=root.findViewById(R.id.tttt1);
                         txt1.setText(String.valueOf(s1));
+
+
                         TextView txt2=root.findViewById(R.id.t2);
                         txt2.setText(String.valueOf(s2));
                         TextView txt3=root.findViewById(R.id.t3);
                         txt3.setText(String.valueOf(s3));
 
+                        //piechart
+                        PieChart pieChart=root.findViewById(R.id.piechart);
+//pieChart.setUsePercentValues(true);
+                        List<PieEntry> value=new ArrayList<>();
+                        value.add(new PieEntry(s1,"current"));
+                        value.add(new PieEntry(100,"total"));
+                        PieDataSet pieDataSet=new PieDataSet(value,"");
+                        PieData piedata =new PieData(pieDataSet);
+                        pieChart.setData(piedata);
+                        Description desc=new Description();
+                        desc.setText("");
+                        pieChart.setDescription(desc);
+                        pieDataSet.setColors(ColorTemplate.LIBERTY_COLORS);
+                        pieChart.animateXY(1400,1400);
+//
 
 
+
+                        //piechart
+                        PieChart pieChart1=root.findViewById(R.id.piechart1);
+//pieChart.setUsePercentValues(true);
+                        List<PieEntry> value1=new ArrayList<>();
+                        value1.add(new PieEntry(s2,"Remaining"));
+                        value1.add(new PieEntry((grand-tot),"total"));
+                        PieDataSet pieDataSet1=new PieDataSet(value1,"");
+                        PieData piedata1 =new PieData(pieDataSet1);
+                        pieChart1.setData(piedata1);
+                        Description desc1=new Description();
+                        desc1.setText("");
+                        pieChart1.setDescription(desc1);
+                        pieDataSet1.setColors(ColorTemplate.LIBERTY_COLORS);
+                        pieChart1.animateXY(1400,1400);
+//
+
+
+//int[] colors={25,27};
+                        //piechart
+                        PieChart pieChart2=root.findViewById(R.id.piechart2);
+//pieChart.setUsePercentValues(true);
+                        List<PieEntry> value2=new ArrayList<>();
+                        value2.add(new PieEntry(s3,"current"));
+                        value2.add(new PieEntry(s2,"total"));
+                        PieDataSet pieDataSet2=new PieDataSet(value2,"");
+                        PieData piedata2 =new PieData(pieDataSet2);
+                        pieChart2.setData(piedata2);
+                        Description desc2=new Description();
+                        desc2.setText("");
+                        pieChart2.setDescription(desc2);
+                        pieDataSet2.setColors(ColorTemplate.LIBERTY_COLORS);
+                        pieChart2.animateXY(1400,1400);
+//
                     }
 
                     @Override
@@ -113,9 +181,10 @@ public class HomeFragment extends Fragment {
 
 
 
+
+
             }
         });
-
 
         return root;
     }
