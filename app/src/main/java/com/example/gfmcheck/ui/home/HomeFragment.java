@@ -104,8 +104,8 @@ public class HomeFragment extends Fragment {
                         PieChart pieChart=root.findViewById(R.id.piechart);
 //pieChart.setUsePercentValues(true);
                         List<PieEntry> value=new ArrayList<>();
-                        value.add(new PieEntry(s1,"current"));
-                        value.add(new PieEntry(100,"total"));
+                        value.add(new PieEntry(100,"current"));
+                        value.add(new PieEntry(s1,"total"));
                         PieDataSet pieDataSet=new PieDataSet(value,"");
                         PieData piedata =new PieData(pieDataSet);
                         pieChart.setData(piedata);
@@ -122,8 +122,8 @@ public class HomeFragment extends Fragment {
                         PieChart pieChart1=root.findViewById(R.id.piechart1);
 //pieChart.setUsePercentValues(true);
                         List<PieEntry> value1=new ArrayList<>();
-                        value1.add(new PieEntry(s2,"Remaining"));
-                        value1.add(new PieEntry((grand-tot),"total"));
+                        value1.add(new PieEntry(grand,"total"));
+                        value1.add(new PieEntry((s3),"Remaining"));
                         PieDataSet pieDataSet1=new PieDataSet(value1,"");
                         PieData piedata1 =new PieData(pieDataSet1);
                         pieChart1.setData(piedata1);
@@ -140,8 +140,8 @@ public class HomeFragment extends Fragment {
                         PieChart pieChart2=root.findViewById(R.id.piechart2);
 //pieChart.setUsePercentValues(true);
                         List<PieEntry> value2=new ArrayList<>();
-                        value2.add(new PieEntry(s3,"current"));
-                        value2.add(new PieEntry(s2,"total"));
+                        value2.add(new PieEntry(s3,"Total"));
+                        value2.add(new PieEntry(s2,"Required"));
                         PieDataSet pieDataSet2=new PieDataSet(value2,"");
                         PieData piedata2 =new PieData(pieDataSet2);
                         pieChart2.setData(piedata2);
